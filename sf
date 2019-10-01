@@ -1,0 +1,53 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+class Lesson_14_Activity_Three{
+public static void main (String[]fsaf){
+    Scanner scan = new Scanner (System.in);
+    System.out.println("Please enter the first octet:");
+    int first= scan.nextInt();
+    System.out.println("Please enter the second octet");
+    int second= scan.nextInt();
+    System.out.println("Please enter the third octet:");
+    int third= scan.nextInt();
+    System.out.println("Please enter the fourth octet:");
+    int fourth = scan.nextInt();
+    
+    boolean one = false;
+    boolean two= false;
+    boolean three= false;
+    boolean four= false;
+    
+
+    
+    if (first < 0|| first > 255){
+        one = true;
+    }
+   
+    if (second <0 || second > 255){
+        two= true;
+    }
+    if (third<0 || third >255){
+        three = true;
+    }
+    if (fourth<0 || fourth>255){
+        four= true;
+    }
+    
+    if(one){
+        System.out.println("Octet 1 is incorrect");
+    }
+     if (two){
+        System.out.println("Octet 2 is incorrect");
+    }
+     if (three){
+        System.out.println("Octet 3 is incorrect");
+    }
+    if (four){
+        System.out.print("Octet 4 is incorrect");
+    }
+    if((one==false && two ==false)&& (three==false && four== false)) {
+        System.out.print (first + "." + second + "." + third + "." + fourth);
+    }
+}
+}
